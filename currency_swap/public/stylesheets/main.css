@@ -1,0 +1,11 @@
+.execute-btn{
+  width: 30%;
+  height: 100px;
+  border-radius: 5%;
+  margin: 15px;
+}
+
+.declaration{
+  border: 1px solid black;
+  padding: 15px;
+}
