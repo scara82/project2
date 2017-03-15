@@ -6,6 +6,7 @@
     <p>I have: <%= post['amount'] %> <%= post['curr_from']%> </p>
     <p>and I want <%= post['curr_to'] %> before the <%= post['before_date'] %> </p>
     <p> I live in <%= post['post_code'] %></p>
+    <p>Comment: <%= post['comment'] %></p>
 
     <button onclick="location.href='/post/<%= post['id']%>/edit'" type="button">Edit request</button>
 

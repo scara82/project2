@@ -3,6 +3,11 @@ body{
   font-family: 'Gloria Hallelujah', cursive;
 }
 
+#comment_box{
+  width: 300px;
+  height: 30px;
+}
+
 .execute-btn{
   font-family: 'Gloria Hallelujah', cursive;
   width: 30%;

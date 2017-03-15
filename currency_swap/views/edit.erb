@@ -26,11 +26,13 @@
   <input type="date" name="before_date" value="<%= @post.before_date %>">
 
   <label for="">I live in</label>
-  <input type="text" name="post_code" value='<%= @post.post_code %>'>
+  <input type="text" name="city" value='<%= @post.city %>'>
 
   <label>My phone number</label>
   <input type="text" name="phone_number" value='<%= @post.phone_number %>'>
 
+  <label>Comment:</label>
+  <input type="text" name="comment" value='<%= @post.comment %>'>
 
   <button>Edit</button>
 </form>

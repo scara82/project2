@@ -11,9 +11,10 @@ CREATE TABLE posts (
   curr_to VARCHAR(100) NOT NULL,
   amount INTEGER NOT NULL,
   before_date DATE,
-  post_code VARCHAR,
+  city VARCHAR,
   phone_number VARCHAR NOT NULL,
-  user_id INTEGER
+  user_id INTEGER,
+  comment TEXT
 );
 
 CREATE TABLE users_ratings (

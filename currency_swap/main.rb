@@ -14,7 +14,7 @@ helpers do
     User.find_by(id: session[:user_id])
   end
 
-  def logged_in? # w/? return boolean
+  def logged_in?
     !!current_user
   end
 
@@ -56,8 +56,9 @@ post '/posts' do
   post.amount = params[:amount]
   post.curr_to = params[:curr_to]
   post.before_date = params[:before_date]
-  post.post_code = params[:post_code]
+  post.city = params[:city]
   post.phone_number = params[:phone_number]
+  post.comment = params[:comment]
   post.user_id = session[:user_id]
   post.save
   if post.save
@@ -97,13 +98,12 @@ put '/post/:id' do
   post.amount = params[:amount]
   post.curr_to = params[:curr_to]
   post.before_date = params[:before_date]
-  post.post_code = params[:post_code]
+  post.city = params[:city]
+  post.comment = params[:comment]
   post.phone_number = params[:phone_number]
   post.save
   redirect '/posts/my_posts'
 end
-
-
 
 get '/session/new' do
   erb :login

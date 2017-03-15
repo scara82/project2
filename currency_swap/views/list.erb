@@ -4,6 +4,7 @@
   <% @posts.each do |post| %>
     <p>I have: <%= post['amount'] %> <%= post['curr_from']%> </p>
     <p>and I want <%= post['curr_to'] %> before the <%= post['before_date'] %> </p>
+    <p>Comment: <%= post['comment'] %></p>
     <hr>
   <% end %>
 

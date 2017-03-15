@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
   <% if logged_in? %>
   logged in as <%= current_user.email%>
   <form action="/session" method="post">
@@ -18,8 +17,6 @@
   <% end %>
 
   <button onclick="location.href='/'"  class='homepage-btn' type="button">Homepage</button>
-
-  <!-- session :<%= session[:user_id] %> -->
 
   <%= yield %>
 
