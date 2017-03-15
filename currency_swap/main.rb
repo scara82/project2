@@ -78,7 +78,7 @@ post '/posts/list' do
 end
 
 get '/posts/my_posts' do
-  @posts = Post.all
+  @posts = Post.where(user_id: session[:user_id])
   erb :my_posts
 end
 

@@ -1,39 +1,45 @@
 <h2>New Request</h2>
 
-<form action="/posts" method="post">
+<div class="container">
 
-  <label for="">I have:</label>
-  <select name="curr_from">
-    <option value="euro">Euro</option>
-    <option value="audollar">AU Dollar</option>
-    <option value="usdollar">US Dollar</option>
-    <option value="chinese_yuan">Chinese Yuan</option>
-  </select>
+  <form id='new_form' action="/posts" method="post">
 
-  <label for="">Amount</label>
-  <input type="text" name="amount">
+    <label for="">I have:</label>
+    <select name="curr_from">
+      <option value="euro">Euro</option>
+      <option value="audollar">AU Dollar</option>
+      <option value="usdollar">US Dollar</option>
+      <option value="chinese_yuan">Chinese Yuan</option>
+    </select>
 
-  <label for="">I need:</label>
-  <select name="curr_to">
-    <option value="euro">Euro</option>
-    <option value="audollar">AU Dollar</option>
-    <option value="usdollar">US Dollar</option>
-    <option value="chinese_yuan">Chinese Yuan</option>
-  </select>
+    <label for="">Amount</label>
+    <input type="text" name="amount">
 
-  <label for="">Before the:</label>
-  <input type="date" name="before_date">
+    <label for="">I need:</label>
+    <select name="curr_to">
+      <option value="euro">Euro</option>
+      <option value="audollar">AU Dollar</option>
+      <option value="usdollar">US Dollar</option>
+      <option value="chinese_yuan">Chinese Yuan</option>
+    </select>
 
-  <label for="">I live in</label>
-  <input type="text" name="city">
+    <label for="">Before the:</label>
+    <input type="date" name="before_date">
 
-  <!-- <label for="">My phone number</label>
-  <input type="text" name="phone_number"> -->
+    <label for="">I live in</label>
+    <input type="text" name="city">
 
-  <br>
+    <!-- <label for="">My phone number</label>
+    <input type="text" name="phone_number"> -->
 
-  <label for="">Comment: </label>
-  <input id='comment_box' type="text" name="comment">
+    <br>
 
-  <button>Create</button>
-</form>
+    <label for="">Comment: </label>
+    <input id='comment_box' type="text" name="comment">
+
+    <button>Create</button>
+  </form>
+
+  <div id="powerd"></div><script src="https://www.transfermate.com/en/exchange_rates_api.asp" type="text/javascript"></script><noscript><br/><span style="color: red;">Please enable your javascript.</span></noscript>
+
+</div>
