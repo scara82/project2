@@ -22,3 +22,12 @@ CREATE TABLE users_ratings (
   email VARCHAR(400) NOT NULL,
   rating INTEGER
 );
+
+CREATE TABLE chats(
+  id SERIAL4 PRIMARY KEY,
+  post_id INTEGER,
+  sender_id INTEGER,
+  receiver_id INTEGER,
+  date_msg DATE,
+  message TEXT
+);

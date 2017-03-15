@@ -1,21 +1,19 @@
 <h1>My Requests</h1>
 
-<div class="list_item">
-  
+<ul class="list-group">
   <% @posts.each do |post| %>
-    <p>I have: <%= post['amount'] %> <%= post['curr_from']%> </p>
-    <p>and I want <%= post['curr_to'] %> before the <%= post['before_date'] %> </p>
-    <p> I live in <%= post['post_code'] %></p>
-    <p>Comment: <%= post['comment'] %></p>
+    <li class="list-group-item">
+      <p>I have: <%= post['amount'] %> <%= post['curr_from']%> </p>
+      <p>and I want <%= post['curr_to'] %> before the <%= post['before_date'] %> </p>
+      <p> I live in <%= post['city'] %></p>
+      <p>Comment: <%= post['comment'] %></p>
 
-    <button onclick="location.href='/post/<%= post['id']%>/edit'" type="button">Edit request</button>
+        <button onclick="location.href='/post/<%= post['id']%>/edit'" type="button">Edit request</button>
 
-    <form action="/post/<%= post['id'] %>" method="post">
-      <input type="hidden" name="_method" value="delete">
-      <button>Delete</button>
-    </form>
-
-    <hr>
+        <form action="/post/<%= post['id'] %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <button>Delete</button>
+        </form>
   <% end %>
-
-</div>
+    </li>
+  </ul>

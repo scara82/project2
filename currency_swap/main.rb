@@ -5,6 +5,7 @@ require_relative 'database_config'
 require_relative 'models/user'
 require_relative 'models/post'
 require_relative 'models/user_rating'
+require_relative 'models/chat'
 
 enable :sessions
 
@@ -37,7 +38,7 @@ post '/users' do
   user.email = params[:email]
   user.password = params[:password]
   user.phone_number = params[:phone_number]
-  user.user_id = params[:user_id]
+  user.id = params[:id]
   user.save
   if user.save
     redirect '/'
@@ -74,6 +75,7 @@ end
 
 post '/posts/list' do
   @posts = Post.where(curr_from: params['curr_to'], curr_to: params['curr_from'])
+  @chats = Chat.where(sender_id: params['user_id'] || receiver_id: params['user_id'])
   erb :list
 end
 

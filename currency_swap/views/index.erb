@@ -1,32 +1,34 @@
-<h1>Currency Swap!</h1>
 
   <% if !logged_in? %>
 
-    <form class="" action="/session" method="post">
-      <label for="">email</label>
-      <input type="text" name="email">
+  <form class="back" action="/session" method="post">
 
-      <label for="">password</label>
-      <input type="password" name="password" value="">
+    <div class="input-group">
+      <span class="input-group-addon" id="sizing-addon2">email</span>
+      <input type="text" name="email" class="form-control"  aria-describedby="sizing-addon2">
+    </div>
 
-      <button>login</button>
-    </form>
+    <div class="input-group">
+      <span class="input-group-addon" id="sizing-addon2">Password</span>
+      <input type="password" name="password" class="form-control" aria-describedby="sizing-addon2">
+    </div>
 
-    <button onclick="location.href='/users/new'"  class='' type="button" name="new_user-btn"> Create a New Profile</button>
+    <button class="input-group" >login</button>
+
+    <button onclick="location.href='/users/new'"  class="input-group" type="button" name="new_user-btn"> Create a New Profile</button>
+
+  </form>
 
   <% end %>
 
+  <div class="btn-group" role="group" aria-label="...">
+    <button onclick="location.href='/posts/new'" name="addRequest-btn" type="button" class="btn btn-default">Add a new Request</button>
+    <button onclick="location.href='/posts/list/new'" name="searchRequest-btn" type="button" class="btn btn-default">Search a Match</button>
+    <button onclick="location.href='/posts/my_posts'" name="myRequests-btn" type="button" class="btn btn-default">My Requests</button>
+  </div>
 
-<div class="btn-container">
-
-<button onclick="location.href='/posts/new'"  class='execute-btn' type="button" name="addRequest-btn"> Add a new Request</button>
-<button onclick="location.href='/posts/list/new'"  class='execute-btn' type="button" name="searchRequest-btn">Search a Match</button>
-<button onclick="location.href='/posts/my_posts'"  class='execute-btn' type="button" name="myRequests-btn">My Requests</button>
-
-
-</div>
-
-<div class="declaration">
+<div class="declaration back">
   <h1>Declaration</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+  <p>This is a place whre people can contact people with dame necessity. Please always be safe when meeting people:
+  choose a crowded place, even better if you know that there are cameras. If possible don't go alone. </p>
 </div>

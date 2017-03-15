@@ -1,8 +1,8 @@
 <h1>Matching Request</h1>
 
-<div class="list_item">
+<ul class="list-group back">
   <% @posts.each do |post| %>
-
+    <li class="list-group-item">
       <p>I have: <%= post['amount'] %> <%= post['curr_from']%> and I want <%= post['curr_to'] %> </p>
         <% if post[:before_date] != nil && post[:before_date] > Date.today%>
           <p>before the <%= post['before_date'] %> </p>
@@ -11,8 +11,6 @@
         <% if post[:comment] != nil%>
           <p>Comment: <%= post['comment'] %></p>
         <% end %>
-      <hr>
-
+    </li>
   <% end %>
-
-</div>
+</ul>
