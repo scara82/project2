@@ -1,6 +1,7 @@
-<h2>New Request</h2>
+<h2>Edit Post</h2>
 
-<form action="/posts" method="post">
+<form action="/post/<%= @post.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
 
   <label for="">I have:</label>
   <select name="curr_from">
@@ -11,10 +12,10 @@
   </select>
 
   <label for="">Amount</label>
-  <input type="text" name="amount">
+  <input type="text" name="amount" value="<%= @post.amount %>">
 
   <label for="">I need:</label>
-  <select name="curr_to">
+  <select name="curr_to" value= "<%= @post.curr_to %>">
     <option value="euro">Euro</option>
     <option value="audollar">AU Dollar</option>
     <option value="usdollar">US Dollar</option>
@@ -22,14 +23,14 @@
   </select>
 
   <label for="">Before the:</label>
-  <input type="date" name="before_date">
+  <input type="date" name="before_date" value="<%= @post.before_date %>">
 
   <label for="">I live in</label>
-  <input type="text" name="post_code">
+  <input type="text" name="post_code" value='<%= @post.post_code %>'>
 
-  <label for="">My phone number</label>
-  <input type="text" name="phone_number">
+  <label>My phone number</label>
+  <input type="text" name="phone_number" value='<%= @post.phone_number %>'>
 
 
-  <button>Create</button>
+  <button>Edit</button>
 </form>

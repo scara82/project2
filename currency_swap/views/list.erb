@@ -1,0 +1,10 @@
+<h1>Matching Request</h1>
+
+<div class="list_item">
+  <% @posts.each do |post| %>
+    <p>I have: <%= post['amount'] %> <%= post['curr_from']%> </p>
+    <p>and I want <%= post['curr_to'] %> before the <%= post['before_date'] %> </p>
+    <hr>
+  <% end %>
+
+</div>

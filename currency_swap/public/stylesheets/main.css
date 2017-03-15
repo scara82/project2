@@ -1,11 +1,23 @@
+body{
+  background-color: #ccffe6;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
 .execute-btn{
+  font-family: 'Gloria Hallelujah', cursive;
   width: 30%;
   height: 100px;
   border-radius: 5%;
   margin: 15px;
+  background-color: #85e0e0;
+  font-size: 30px;
 }
 
 .declaration{
   border: 1px solid black;
   padding: 15px;
+}
+
+.list-item{
+  border: 1px solid black;
 }

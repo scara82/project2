@@ -1,21 +1,28 @@
 <h1>Currency Swap!</h1>
 
-<form class="" action="/session" method="post">
-  <label for="">email</label>
-  <input type="text" name="email">
+  <% if !logged_in? %>
 
-  <label for="">password</label>
-  <input type="password" name="password" value="">
+    <form class="" action="/session" method="post">
+      <label for="">email</label>
+      <input type="text" name="email">
 
-  <button>login</button>
-</form>
+      <label for="">password</label>
+      <input type="password" name="password" value="">
 
-<button onclick="location.href='/users/new'"  class='' type="button" name="new_user-btn"> Create a New Profile</button>
+      <button>login</button>
+    </form>
+
+    <button onclick="location.href='/users/new'"  class='' type="button" name="new_user-btn"> Create a New Profile</button>
+
+  <% end %>
+
 
 <div class="btn-container">
 
 <button onclick="location.href='/posts/new'"  class='execute-btn' type="button" name="addRequest-btn"> Add a new Request</button>
-<button onclick="location.href='/posts/list'"  class='execute-btn' type="button" name="searchRequest-btn">Search a Match</button>
+<button onclick="location.href='/posts/list/new'"  class='execute-btn' type="button" name="searchRequest-btn">Search a Match</button>
+<button onclick="location.href='/posts/my_posts'"  class='execute-btn' type="button" name="myRequests-btn">My Requests</button>
+
 
 </div>
 

@@ -1,0 +1,27 @@
+<form class="selected_posts" action="/posts/list" method="post">
+
+    <label for="">I have:</label>
+    <select name="curr_from">
+      <option value="euro">Euro</option>
+      <option value="audollar">AU Dollar</option>
+      <option value="usdollar">US Dollar</option>
+      <option value="chinese_yuan">Chinese Yuan</option>
+    </select>
+
+    <label for="">Amount</label>
+    <input type="text" name="amount">
+
+    <label for="">I need:</label>
+    <select name="curr_to">
+      <option value="euro">Euro</option>
+      <option value="audollar">AU Dollar</option>
+      <option value="usdollar">US Dollar</option>
+      <option value="chinese_yuan">Chinese Yuan</option>
+    </select>
+
+    <label for="">Before the:</label>
+    <input type="date" name="before_date">
+
+    <button>Search</button>
+    
+</form>

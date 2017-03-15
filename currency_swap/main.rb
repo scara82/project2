@@ -37,6 +37,7 @@ post '/users' do
   user.email = params[:email]
   user.password = params[:password]
   user.phone_number = params[:phone_number]
+  user.user_id = params[:user_id]
   user.save
   if user.save
     redirect '/'
@@ -57,6 +58,7 @@ post '/posts' do
   post.before_date = params[:before_date]
   post.post_code = params[:post_code]
   post.phone_number = params[:phone_number]
+  post.user_id = session[:user_id]
   post.save
   if post.save
     redirect '/'
@@ -65,9 +67,43 @@ post '/posts' do
   end
 end
 
-post '/posts/list' do
+get '/posts/list/new' do
   erb :selected_posts
 end
+
+post '/posts/list' do
+  @posts = Post.all
+  erb :list
+end
+
+get '/posts/my_posts' do
+  @posts = Post.all
+  erb :my_posts
+end
+
+delete '/post/:id' do
+  Post.find(params[:id]).destroy
+  redirect '/'
+end
+
+get '/post/:id/edit' do
+  @post = Post.find(params[:id])
+  erb :edit
+end
+
+put '/post/:id' do
+  post = Post.find(params[:id])
+  post.curr_from = params[:curr_from]
+  post.amount = params[:amount]
+  post.curr_to = params[:curr_to]
+  post.before_date = params[:before_date]
+  post.post_code = params[:post_code]
+  post.phone_number = params[:phone_number]
+  post.save
+  redirect '/posts/my_posts'
+end
+
+
 
 get '/session/new' do
   erb :login
