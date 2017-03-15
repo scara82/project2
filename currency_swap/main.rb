@@ -73,7 +73,7 @@ get '/posts/list/new' do
 end
 
 post '/posts/list' do
-  @posts = Post.all
+  @posts = Post.where(curr_from: params['curr_to'], curr_to: params['curr_from'])
   erb :list
 end
 
