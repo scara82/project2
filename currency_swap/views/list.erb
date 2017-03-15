@@ -11,6 +11,11 @@
         <% if post[:comment] != nil%>
           <p>Comment: <%= post['comment'] %></p>
         <% end %>
+        <p>Chat</p>
+        <%= session[:user_id] %>
+        <input id='chat_box' type="text" name="message">
+
+
     </li>
   <% end %>
 </ul>

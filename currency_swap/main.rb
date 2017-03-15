@@ -75,7 +75,6 @@ end
 
 post '/posts/list' do
   @posts = Post.where(curr_from: params['curr_to'], curr_to: params['curr_from'])
-  @chats = Chat.where(sender_id: params['user_id'] || receiver_id: params['user_id'])
   erb :list
 end
 
@@ -105,6 +104,20 @@ put '/post/:id' do
   post.phone_number = params[:phone_number]
   post.save
   redirect '/posts/my_posts'
+end
+
+post '/chat' do
+  chat = Chat.new
+  chat.body = params[:body]
+  chat.post_id = params[:post_id]
+  chat.sender_id = params[:sender_id]
+  chat.receiver_id = params[:receiver_id]
+  chat.date_msg = params[:date_msg]
+  if chat.save
+    redirect ""
+  else
+    erb :
+  end
 end
 
 get '/session/new' do

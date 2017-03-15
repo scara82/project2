@@ -29,5 +29,5 @@ CREATE TABLE chats(
   sender_id INTEGER,
   receiver_id INTEGER,
   date_msg DATE,
-  message TEXT
+  body TEXT
 );
