@@ -6,4 +6,4 @@ require_relative 'models/user'
 require_relative 'models/user_rating'
 require_relative 'models/chat'
 
-binding.pry
+# binding.pry

@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader'
+# require 'sinatra/reloader'
 require 'pg'
 require_relative 'database_config'
 require_relative 'models/user'
