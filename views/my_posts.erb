@@ -4,10 +4,11 @@
   <% @posts.each do |post| %>
     <li class="list-group-item">
       <p>I have: <%= post['amount'] %> <%= post['curr_from']%> </p>
-      <p>and I want <%= post['curr_to'] %> before the <%= post['before_date'] %> </p>
+      <p> and I want <%= post['curr_to'] %> before the <%= post['before_date'] %>.  </p>
       <p> I live in <%= post['city'] %></p>
+        <br>
       <p>Comment: <%= post['comment'] %></p>
-
+        <br>
         <button onclick="location.href='/post/<%= post['id']%>/edit'" type="button">Edit request</button>
 
         <form action="/post/<%= post['id'] %>" method="post">
