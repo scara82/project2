@@ -38,6 +38,7 @@ post '/users' do
   user.email = params[:email]
   user.password = params[:password]
   user.phone_number = params[:phone_number]
+  user.username = params[:username]
   user.id = params[:id]
   user.save
   if user.save
@@ -91,7 +92,7 @@ post '/chat' do
   chat.post_id = params[:post_id]
   chat.sender_id = session[:user_id]
   chat.date_msg = params[:date_msg]
-  chat.username = @users.username
+  chat.sender_username = @users.username
   chat.save
   erb :selected_posts
 end

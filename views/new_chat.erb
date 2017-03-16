@@ -3,6 +3,8 @@
   <input type="text" name="body">
   <input type="hidden" name="chats_post_id" value= <%=@post.id%>>
   <input type="hidden" name="date_msg" value= <%= Date.today %> >
+  <input type="hidden" name="sender_username" value= <%= @users.username %> >
+
 
   <button> Send </button>
 </form>

@@ -24,7 +24,7 @@ CREATE TABLE users_ratings (
   rating INTEGER
 );
 
-CREATE TABLE chats(
+CREATE TABLE chats (
   id SERIAL4 PRIMARY KEY,
   post_id INTEGER ,
   sender_id INTEGER,

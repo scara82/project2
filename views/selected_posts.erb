@@ -1,7 +1,8 @@
 <form class="selected_posts back form" action="/posts/list" method="post">
 
   <h1>Search for posts</h1>
-    <label>I have:</label>
+    <label>I have</label>
+    <input type="text" name="amount" placeholder="amount">
     <select name="curr_from">
       <option value="euro">Euro</option>
       <option value="audollar">AU Dollar</option>
@@ -9,10 +10,7 @@
       <option value="chinese_yuan">Chinese Yuan</option>
     </select>
 
-    <label>Amount</label>
-    <input type="text" name="amount">
-
-    <label>I need:</label>
+    <label>and I need</label>
     <select name="curr_to">
       <option value="euro">Euro</option>
       <option value="audollar">AU Dollar</option>
@@ -20,13 +18,13 @@
       <option value="chinese_yuan">Chinese Yuan</option>
     </select>
 
-    <label>Before the:</label>
+    <!-- <label>Before the:</label>
     <input type="date" name="before_date">
 
     <label>Comment: </label>
-    <input type="text" name="comment">
+    <input type="text" name="comment"> -->
 
-    <button>Search</button>
+    <button>Search Match!</button>
 
 </form>
 

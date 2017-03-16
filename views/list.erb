@@ -16,7 +16,7 @@
 
         <% @chats = Chat.where(post_id: @post_id) %>
         <% @chats.each do |chat|%>
-          <p> <%= chat.sender_id %> says:  <%= chat.body %> </p>
+          <p> <b><%= chat.sender_username %>:</b>  <%= chat.body %> </p>
           <p>(<%= chat.date_msg%>)</p>
           <br>
         <% end %>
