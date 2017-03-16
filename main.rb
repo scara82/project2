@@ -64,7 +64,7 @@ post '/posts' do
   post.user_id = session[:user_id]
   post.save
   if post.save
-    redirect '/'
+    redirect '/git'
   else
     erb :new
   end

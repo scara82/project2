@@ -10,10 +10,10 @@ CREATE TABLE posts (
   id SERIAL4 PRIMARY KEY,
   curr_from VARCHAR(100) NOT NULL,
   curr_to VARCHAR(100) NOT NULL,
-  amount INTEGER NOT NULL,
+  amount INTEGER,
   before_date DATE,
   city VARCHAR,
-  phone_number VARCHAR NOT NULL,
+  phone_number VARCHAR,
   user_id INTEGER,
   comment TEXT
 );
