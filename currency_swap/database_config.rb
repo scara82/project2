@@ -5,4 +5,4 @@ options = {
   database: 'currency_swap'
 }
 
-ActiveRecord::Base.establish_connection(options)
+ActiveRecord::Base.establish_connection( ENV['DATABASE_URL'] || options)

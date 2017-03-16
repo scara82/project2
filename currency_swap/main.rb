@@ -78,6 +78,24 @@ post '/posts/list' do
   erb :list
 end
 
+get '/chat/new' do
+  @posts = Post.where(curr_from: params['curr_to'], curr_to: params['curr_from'])
+  erb :new_chat
+end
+
+post '/chat' do
+  @posts = Post.where(curr_from: params['curr_to'], curr_to: params['curr_from'])
+  @users = User.find(session[:user_id])
+  chat = Chat.new
+  chat.body = params[:body]
+  chat.post_id = params[:post_id]
+  chat.sender_id = session[:user_id]
+  chat.date_msg = params[:date_msg]
+  chat.username = @users.username
+  chat.save
+  erb :selected_posts
+end
+
 get '/posts/my_posts' do
   @posts = Post.where(user_id: session[:user_id])
   erb :my_posts
@@ -95,6 +113,7 @@ end
 
 put '/post/:id' do
   post = Post.find(params[:id])
+  @post_id = params[:id]
   post.curr_from = params[:curr_from]
   post.amount = params[:amount]
   post.curr_to = params[:curr_to]
@@ -104,20 +123,6 @@ put '/post/:id' do
   post.phone_number = params[:phone_number]
   post.save
   redirect '/posts/my_posts'
-end
-
-post '/chat' do
-  chat = Chat.new
-  chat.body = params[:body]
-  chat.post_id = params[:post_id]
-  chat.sender_id = params[:sender_id]
-  chat.receiver_id = params[:receiver_id]
-  chat.date_msg = params[:date_msg]
-  if chat.save
-    redirect ""
-  else
-    erb :
-  end
 end
 
 get '/session/new' do

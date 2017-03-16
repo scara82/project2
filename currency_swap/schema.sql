@@ -2,6 +2,7 @@ CREATE TABLE users (
   id SERIAL4 PRIMARY KEY,
   email VARCHAR(400) NOT NULL,
   phone_number VARCHAR NOT NULL,
+  username VARCHAR,
   password_digest VARCHAR(400) NOT NULL
 );
 
@@ -25,9 +26,9 @@ CREATE TABLE users_ratings (
 
 CREATE TABLE chats(
   id SERIAL4 PRIMARY KEY,
-  post_id INTEGER,
+  post_id INTEGER ,
   sender_id INTEGER,
-  receiver_id INTEGER,
+  sender_username VARCHAR,
   date_msg DATE,
   body TEXT
 );

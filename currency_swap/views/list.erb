@@ -1,8 +1,10 @@
 <h1>Matching Request</h1>
 
-<ul class="list-group back">
+<ul class="list-group back"
   <% @posts.each do |post| %>
+    <% @post_id = post.id %>
     <li class="list-group-item">
+
       <p>I have: <%= post['amount'] %> <%= post['curr_from']%> and I want <%= post['curr_to'] %> </p>
         <% if post[:before_date] != nil && post[:before_date] > Date.today%>
           <p>before the <%= post['before_date'] %> </p>
@@ -11,10 +13,20 @@
         <% if post[:comment] != nil%>
           <p>Comment: <%= post['comment'] %></p>
         <% end %>
-        <p>Chat</p>
-        <%= session[:user_id] %>
-        <input id='chat_box' type="text" name="message">
 
+        <% @chats = Chat.where(post_id: @post_id) %>
+        <% @chats.each do |chat|%>
+          <p> <%= chat.sender_id %> says:  <%= chat.body %> </p>
+          <p>(<%= chat.date_msg%>)</p>
+          <br>
+        <% end %>
+
+        <form class="" action="/chat" method="post">
+          <input type="text" name="body">
+          <input type="hidden" name="post_id" value="<%= post['id'] %>">
+          <input type="hidden" name="date_msg" value= <%= Date.today %> >
+          <button>Comment</button>
+        </form>
 
     </li>
   <% end %>
