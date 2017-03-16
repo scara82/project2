@@ -120,7 +120,6 @@ put '/post/:id' do
   post.before_date = params[:before_date]
   post.city = params[:city]
   post.comment = params[:comment]
-  post.phone_number = params[:phone_number]
   post.save
   redirect '/posts/my_posts'
 end
