@@ -59,7 +59,6 @@ post '/posts' do
   post.curr_to = params[:curr_to]
   post.before_date = params[:before_date]
   post.city = params[:city]
-  post.phone_number = params[:phone_number]
   post.comment = params[:comment]
   post.user_id = session[:user_id]
   post.save

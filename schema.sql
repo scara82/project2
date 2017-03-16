@@ -13,7 +13,6 @@ CREATE TABLE posts (
   amount INTEGER,
   before_date DATE,
   city VARCHAR,
-  phone_number VARCHAR,
   user_id INTEGER,
   comment TEXT
 );
