@@ -1,6 +1,7 @@
 require 'sinatra'
 # require 'sinatra/reloader'
 require 'pg'
+# require 'pry'
 require_relative 'database_config'
 require_relative 'models/user'
 require_relative 'models/post'
@@ -39,9 +40,8 @@ post '/users' do
   user.password = params[:password]
   user.phone_number = params[:phone_number]
   user.username = params[:username]
-  user.id = params[:id]
-  user.save
   if user.save
+    session[:user_id] = user.id
     redirect '/'
   else
     erb :new_user
