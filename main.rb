@@ -54,8 +54,8 @@ end
 
 post '/posts' do
   post = Post.new
-  post.curr_from = params[:curr_from]
   post.amount = params[:amount]
+  post.curr_from = params[:curr_from]
   post.curr_to = params[:curr_to]
   post.before_date = params[:before_date]
   post.city = params[:city]
@@ -63,7 +63,7 @@ post '/posts' do
   post.user_id = session[:user_id]
   post.save
   if post.save
-    redirect '/posts/list'
+    redirect '/posts/my_posts'
   else
     erb :new
   end
