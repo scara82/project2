@@ -2,8 +2,6 @@
 
 <ul class="list-group back form"
   <li class="list-group-item">
-    <%if @post == nil%>
-       <p>I'm sorry, no match!</p>
     <% else %>
       <% @posts.each do |post| %>
         <% @post_id = post.id %>
@@ -31,7 +29,7 @@
             </form>
 
     <% end %>
-  <% end %>
-  </li>
   <hr style="width: 100%; color: black; height: 0.7px; background-color:black;" />
+  </li>
+
 </ul>
