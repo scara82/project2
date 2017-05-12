@@ -1,35 +1,32 @@
-<h1>Matching Requests</h1>
+<div class="list-container">
+  <ul class="list-container">
+    <h1>Matching Requests</h1>
+      <li class="">
+          <% @posts.each do |post| %>
+            <% @post_id = post.id %>
+              <p>I have: <%= post['amount'] %> <%= post['curr_from']%> and I want <%= post['curr_to'] %> </p>
+                <% if post[:before_date] != nil && post[:before_date] > Date.today%>
+                  <p>before the <%= post['before_date'] %> </p>
+                <% end %>
 
-<ul class="list-group back form"
-  <li class="list-group-item">
-    <% else %>
-      <% @posts.each do |post| %>
-        <% @post_id = post.id %>
-          <p>I have: <%= post['amount'] %> <%= post['curr_from']%> and I want <%= post['curr_to'] %> </p>
-            <% if post[:before_date] != nil && post[:before_date] > Date.today%>
-              <p>before the <%= post['before_date'] %> </p>
-            <% end %>
+                <% if post[:comment] != nil%>
+                  <p> Comment: <%= post['comment'] %></p>
+                <% end %>
+              <hr style='width: 100%'>
+              <% @chats = Chat.where(post_id: @post_id) %>
+              <% @chats.each do |chat|%>
+                  <p> <strong><%= chat.sender_username %>:</strong>  <%= chat.body %> </p>
+                  <p>(<%= chat.date_msg%>)</p>
+              <% end %>
+              <form class="" action="/chat" method="post">
+                <input type="text" name="body">
+                <input type="hidden" name="post_id" value="<%= post['id'] %>">
+                <input type="hidden" name="date_msg" value= <%= Date.today %> >
+                <button>Comment</button>
+              </form>
 
-            <% if post[:comment] != nil%>
-              <p>Comment: <%= post['comment'] %></p>
-            <% end %>
-
-            <% @chats = Chat.where(post_id: @post_id) %>
-            <% @chats.each do |chat|%>
-                <p> <strong><%= chat.sender_username %>:</strong>  <%= chat.body %> </p>
-                <p>(<%= chat.date_msg%>)</p>
-            <% end %>
-
-
-            <form class="" action="/chat" method="post">
-              <input type="text" name="body">
-              <input type="hidden" name="post_id" value="<%= post['id'] %>">
-              <input type="hidden" name="date_msg" value= <%= Date.today %> >
-              <button>Comment</button>
-            </form>
-
-    <% end %>
-  <hr style="width: 100%; color: black; height: 0.7px; background-color:black;" />
-  </li>
-
-</ul>
+          <hr style="width: 100%; color: black; height: 0.6px; background-color:black; opacity:.6" />
+        <% end %>
+      </li>
+  </ul>
+</div>

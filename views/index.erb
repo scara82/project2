@@ -1,4 +1,4 @@
-
+<body id='homepage'>
   <% if !logged_in? %>
 
   <form class="" action="/session" method="post">
@@ -21,14 +21,36 @@
 
   <% end %>
 
-  <div class="btn-group" role="group" aria-label="...">
-    <button onclick="location.href='/posts/new'" name="addRequest-btn" type="button" class="btn btn-default">Add a new Request</button>
-    <button onclick="location.href='/posts/list/new'" name="searchRequest-btn" type="button" class="btn btn-default">Search a Match</button>
-    <button onclick="location.href='/posts/my_posts'" name="myRequests-btn" type="button" class="btn btn-default">My Requests</button>
+  <div class="declaration back">
+    <h1>Declaration</h1>
+    <p>This is a place where people can meet and swap money in different currencies. Please always be safe when meeting someone you don't know:
+    choose a crowded place, even better if you know that there are cameras. If possible don't go alone. Enjoy it! </p>
   </div>
 
-<div class="declaration back">
-  <h1>Declaration</h1>
-  <p>This is a place where people can meet and swap money in different currencies!!! Please always be safe when meeting someone you don't know:
-  choose a crowded place, even better if you know that there are cameras. If possible don't go alone. </p>
-</div>
+  <div class="btn-group">
+
+    <div class="new-request-btn box-btn">
+      <a href="/posts/new">Add request</a>
+    </div>
+    <div class="new-request-img box-img" style="font-size: 20px">
+      <img src="http://i.imgur.com/vsCRNAu.jpg?2" title="source: imgur.com" />
+      <br>
+      Not true anymore!
+    </div>
+
+    <div class="search-btn box-btn">
+      <a href="/posts/list/new">Search a Match</a>
+    </div>
+    <div class="search-img box-img" style="font-size: 20px">
+      <img src="http://i.imgur.com/8vkPDPB.png?2"/>
+    </div>
+
+    <div class="my-requests-btn box-btn">
+      <a href='/posts/my_posts'>My requests</a>
+    </div>
+    <div class="my-requests-img box-img">
+      <img src="http://i.imgur.com/Pnbt5xw.jpg?1"/img>
+    </div>
+  </div>
+
+</body>
