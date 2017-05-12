@@ -1,26 +1,37 @@
-<form class="selected_posts back form new" action="/posts/list" method="post">
+<div class="new">
 
+  <div class="new-title">
+    <h2>Search for posts</h2>
+  </div>
 
-  <h1>Search for posts</h1>
-    <label>I have</label>
-    <input type="text" name="amount" placeholder="amount">
-    <select name="curr_from">
-      <option value="euro">Euro</option>
-      <option value="audollar">AU Dollar</option>
-      <option value="usdollar">US Dollar</option>
-      <option value="chinese_yuan">Chinese Yuan</option>
-    </select>
+  <form class="new-form" action="/posts/list" method="post">
 
-    <label>and I need</label>
-    <select name="curr_to">
-      <option value="euro">Euro</option>
-      <option value="audollar">AU Dollar</option>
-      <option value="usdollar">US Dollar</option>
-      <option value="chinese_yuan">Chinese Yuan</option>
-    </select>
+      <label>I have</label>
+      <input type="text" name="amount" placeholder="amount">
+      <select name="curr_from">
+        <option value="euro">Euro</option>
+        <option value="audollar">AU Dollar</option>
+        <option value="usdollar">US Dollar</option>
+        <option value="chinese_yuan">Chinese Yuan</option>
+      </select>
 
-    <button>Search Match!</button>
+      <br>
 
-</form>
+      <label>and I need</label>
+      <select name="curr_to">
+        <option value="euro">Euro</option>
+        <option value="audollar">AU Dollar</option>
+        <option value="usdollar">US Dollar</option>
+        <option value="chinese_yuan">Chinese Yuan</option>
+      </select>
 
-<div id="powerd"></div><script src="https://www.transfermate.com/en/exchange_rates_api.asp" type="text/javascript"></script><noscript><br/><span style="color: red;">Please enable your javascript.</span></noscript>
+       <br>
+
+        <button class="new-btn">Search Match!</button>
+  </form>
+
+    <div class="new-converter">
+      <script src="https://www.transfermate.com/en/exchange_rates_api.asp" type="text/javascript"></script><noscript><br/><span style="color: red;">Please enable your javascript.</span></noscript>
+    </div>
+
+</div>
