@@ -1,24 +1,30 @@
 <body id='homepage'>
   <% if !logged_in? %>
 
-  <form class="" action="/session" method="post">
 
-    <div class="input-group">
-      <span class="input-group-addon" id="sizing-addon2">email</span>
-      <input type="text" name="email" class="form-control"  aria-describedby="sizing-addon2">
-    </div>
+    <form class="" action="/session" method="post">
+  <div class="index-form">
+      <div class="index-email">
+        <label >email</label>
+        <input type="text" name="email">
+      </div>
 
-    <div class="input-group">
-      <span class="input-group-addon" id="sizing-addon2">Password</span>
-      <input type="password" name="password" class="form-control" aria-describedby="sizing-addon2">
-    </div>
+      <div class="index-password">
+        <label>Password</label>
+        <input type="password" name="password">
+      </div>
 
-    <button class="input-group" >login</button>
+      <div class="index-login-btn">
+        <button class="index-login-btn" >login</button>
+      </div>
 
-    <button onclick="location.href='/users/new'"  class="input-group" type="button" name="new_user-btn"> Create a New Profile</button>
+      <div class="index-signin-btn">
+        <button onclick="location.href='/users/new'"  class="index-signin-btn" type="button" name="new_user-btn"> Create a New Profile</button>
+      </div>
 
-  </form>
 
+    </form>
+  </div>
   <% end %>
 
   <div class="declaration back">

@@ -1,11 +1,20 @@
-<form class="back form" action="/session" method="post">
-  <label for="">email</label>
-  <input type="text" name="email">
+<div class="login-box">
+  <form action="/session" method="post">
 
-  <label for="">password</label>
-  <input type="password" name="password" value="">
+    <div class="new-email">
+      <label>email</label>
+      <input type="text" name="email">
+    </div>
+    <div class="new-password">
+      <label>password</label>
+      <input type="password" name="password" value="">
+    </div>
+    <div class="login-btn">
+        <button class='login-btn'>login</button>
+    </div>
+    <div class="new-user-btn">
+      <button class='new-user-btn' onclick="location.href='/users/new'"  class="new-user" type="button" name="new_user-btn"> Create a New Profile</button>
+    </div>
 
-  <button>login</button>
-  <button onclick="location.href='/users/new'"  class="input-group" type="button" name="new_user-btn"> Create a New Profile</button>
-
-</form>
+  </form>
+</div>

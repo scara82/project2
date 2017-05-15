@@ -1,7 +1,7 @@
 require 'sinatra'
 # require 'sinatra/reloader'
 require 'pg'
-# require 'pry'
+require 'pry'
 require_relative 'database_config'
 require_relative 'models/user'
 require_relative 'models/post'
@@ -98,6 +98,7 @@ end
 
 get '/posts/my_posts' do
   @posts = Post.where(user_id: session[:user_id])
+  pry
   erb :my_posts
 end
 

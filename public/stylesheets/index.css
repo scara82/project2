@@ -1,0 +1,76 @@
+/*index*/
+/*################################*/
+.container{
+	position: relative;
+	margin-top: 150px;
+}
+.btn-group{
+	display: grid;
+	grid-template-columns: 500px 250px;
+	grid-template-rows: (3, 300px);
+	width: 750px;
+	margin: 30px auto;
+	/*font-family: 'Special Elite', cursive;*/
+	font-family: 'Kranky', cursive;
+	text-align: center;
+	border-top: 30px;
+	background-color: white;
+}
+
+.box-btn a{
+	height: 200px;
+	font-size: 50px;
+	display: inline-block;
+	text-decoration: none;
+	line-height:200px;
+	color: black;
+}
+
+.box-img{
+	border: 1px black solid;
+}
+
+.box-btn{
+	border: 1px black solid;
+}
+.new-request-btn{
+	grid-row: 1 / 2;
+	grid-column: 1 / 2;
+	line-height: 300px;
+}
+
+.new-request-img{
+	grid-row: 1 / 2;
+	grid-column: 2 / 3;
+}
+
+.search-btn{
+	grid-row: 2 / 3;
+	grid-column: 1 / 2;
+}
+
+.search-img{
+	grid-row: 2 / 3;
+	grid-column: 2/ 3;
+	line-height: 200px;
+}
+
+.my-requests-btn{
+	grid-row: 3 / 4;
+	grid-column: 1 / 2;
+}
+
+.my-requests-img{
+	grid-row: 3 / 4;
+	grid-column: 2 / 3;
+	line-height: 200px;
+}
+
+.declaration{
+	font-family: 'Kranky', cursive;
+	border: 1px black solid;
+	padding: 10px;
+	margin: 50px;
+	background-color: white;
+	box-shadow: 5px 5px 3px grey;
+}

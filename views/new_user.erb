@@ -1,24 +1,29 @@
+<div class="new-user">
 
-  <div class="back form">
+  <div class="new-user-title">
+    <h2 class="new-user-title">New User</h2>
+  </div>
 
-    <h2>New User</h2>
+  <form action="/users" method="post">
 
-    <form action="/users" method="post">
-
+    <div class="new-user-email">
       <label for="">email address: </label>
       <input type="text" name="email">
-
+    </div>
+    <div class="new-user-password">
       <label for="">Choose a password: </label>
       <input type="password" name="password">
-
-      <br>
-
+    </div>
+    <div class="new-user-username">
       <label for="">Username:</label>
       <input type="text" name="username">
-
+    </div>
+    <div class="new-user-phone">
       <label for="">Phone number:</label>
       <input type="text" name="phone_number">
-
-      <button>Create</button>
-    </form>
-  </div>
+    </div>
+    <div class="new-user-create-btn">
+      <button class="new-user-create-btn">Create</button>
+    </div>
+  </form>
+</div>

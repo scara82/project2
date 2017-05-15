@@ -1,0 +1,64 @@
+/*header*/
+/*################################*/
+.header{
+	display: grid;
+	grid-template-columns: 40% auto 25%;
+	grid-template-rows: 120px;
+  /*background: rgb(230, 212, 232);*/
+	background-color: rgb(207, 246, 238);
+	margin:auto;
+	z-index:1000;
+	width:100%;
+	-webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+}
+
+#header{
+	position: fixed;
+	top: 0px;
+	-webkit-box-shadow: 0px 6px 5px 0px rgb(207, 246, 238);
+	-moz-box-shadow: 0px 6px 5px 0px rgb(207, 246, 238);
+	box-shadow: 0px 6px 5px 0px rgb(207, 246, 238);
+}
+
+.title{
+	grid-column: 1 / 2;
+	margin: 5px;
+	padding-left: 5px;
+	/*font-family: 'Rock Salt', cursive;*/
+	/*font-family: 'Special Elite', cursive;*/
+	/*font-family: 'Cabin Sketch', cursive;*/
+	font-family: 'Kranky', cursive;
+}
+
+.header-image{
+	grid-column: 2 / 3;
+}
+
+.header-right{
+	grid-column: 3 / 4;
+	margin: 5px;
+	align-self: center;
+	padding: 10px;
+}
+
+.header-btn{
+	border-radius: 10px;
+	margin: 3px;
+	width: 35%;
+}
+
+/*footer*/
+/*################################*/
+footer {
+  background-color: rgb(81, 34, 82);
+	color: white;
+	font-family: 'Kranky', cursive;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  overflow:hidden;
+	padding: 5px;
+}

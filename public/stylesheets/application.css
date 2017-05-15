@@ -12,4 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require new-request
+ *= require index
+ *= require header-footer
+ *= require new-user-form
+ *= require login
  */

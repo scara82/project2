@@ -1,25 +1,32 @@
 <div class="new">
+
   <div class="new-title">
     <h1>My Requests</h1>
   </div>
+
   <div class="my-posts">
     <ul class="list-group">
-      <% @posts.each do |post| %>
-        <li class="list-group-item back">
-          <div class="post back">
-            <p>I have: <%= post['amount'] %> <%= post['curr_from']%> </p>
-            <p> and I want <%= post['curr_to'] %> before the <%= post['before_date'] %>.  </p>
-            <p> I live in <%= post['city'] %></p>
-            <br/>
-            <p>Comment: <%= post['comment'] %></p>
-            <br/>
-              <button style="float: left" class='new-btn' onclick="location.href='/post/<%= post['id']%>/edit'" type="button">Edit request</button>
-              <form action="/post/<%= post['id'] %>" method="post">
-                <input type="hidden" name="_method" value="delete">
-                <button style="float: left"class='new-btn'>Delete request</button>
-              </form>
-          </div>
-        </li>
+
+      <% if @posts === nil %>
+        <h1>no post</h1>
+      <% else %>
+        <% @posts.each do |post| %>
+          <li class="list-group-item back">
+            <div class="post back">
+              <p>I have: <%= post['amount'] %> <%= post['curr_from']%> </p>
+              <p> and I want <%= post['curr_to'] %> before the <%= post['before_date'] %>.  </p>
+              <p> I live in <%= post['city'] %></p>
+              <br/>
+              <p>Comment: <%= post['comment'] %></p>
+              <br/>
+                <button style="float: left" class='new-btn' onclick="location.href='/post/<%= post['id']%>/edit'" type="button">Edit request</button>
+                <form action="/post/<%= post['id'] %>" method="post">
+                  <input type="hidden" name="_method" value="delete">
+                  <button style="float: left"class='new-btn'>Delete request</button>
+                </form>
+            </div>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </div>
