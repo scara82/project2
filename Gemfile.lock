@@ -1,6 +1,5 @@
 GEM
   remote: https://rubygems.org/
-  ruby '2.2.6'
   specs:
     activemodel (5.0.2)
       activesupport (= 5.0.2)
@@ -39,6 +38,9 @@ DEPENDENCIES
   bcrypt
   pg
   sinatra
+
+RUBY VERSION
+   ruby 2.3.3p222
 
 BUNDLED WITH
    1.14.6
