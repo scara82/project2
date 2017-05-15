@@ -98,7 +98,6 @@ end
 
 get '/posts/my_posts' do
   @posts = Post.where(user_id: session[:user_id])
-  pry
   erb :my_posts
 end
 
