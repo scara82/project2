@@ -54,9 +54,6 @@ h2 {
 	grid-column: 1 / 2;
 	margin: 5px;
 	padding-left: 5px;
-	/*font-family: 'Rock Salt', cursive;*/
-	/*font-family: 'Special Elite', cursive;*/
-	/*font-family: 'Cabin Sketch', cursive;*/
 	font-family: 'Kranky', cursive;
 }
 
@@ -350,4 +347,10 @@ button.new-user-create-btn{
   width: 30%;
   font-family: 'Kranky', cursive;
   text-align: center;
+}
+
+/*edit post*/
+/*################################################################################*/
+.list-pag{
+	width: 300px;
 }
